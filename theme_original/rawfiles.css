@@ -1,0 +1,36 @@
+﻿body {    
+	padding:20px;
+    background-color: white;
+    color: black;
+	font-family:"Arial";
+    font-size:16px;
+    line-height:140%
+} 
+
+a:link {
+	color:#000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#666666;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#CBCBCB;
+}
+
+a:active {
+	color:#CBCBCB;
+	text-decoration: none;
+}
+
+table td:first-child {
+    text-align: left;
+    padding-right: 15px;
+}
+
+table td {
+    text-align: right;
+}

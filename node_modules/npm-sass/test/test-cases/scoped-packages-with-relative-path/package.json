@@ -1,0 +1,8 @@
+{
+  "name": "npm-sass-test-npm-modules",
+  "version": "0.0.0",
+  "description": "sass compilation with npm aware include paths",
+  "dependencies": {
+    "@lennym/npm-sass-test-sass": "0.0.0"
+  }
+}

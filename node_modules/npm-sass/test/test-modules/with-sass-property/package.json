@@ -1,0 +1,6 @@
+{
+  "name": "npm-sass-test-sass",
+  "version": "0.0.0",
+  "description": "sass compilation with npm aware include paths",
+  "sass": "test-sass-file.scss"
+}

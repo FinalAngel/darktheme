@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var sass = require('../index'),
+    camelify = require('camelify'),
+    argh = require('argh').argv;
+
+var input = process.argv[2];
+
+var whitelist = [
+    'output-style',
+    'indent-type',
+    'indent-width',
+    'linefeed',
+    'source-comments',
+    'source-map',
+    'source-map-contents',
+    'source-map-embed',
+    'source-map-root',
+    'precision',
+    'functions'
+];
+var options = {};
+
+whitelist.forEach(function (p) {
+    options[camelify(p)] = argh[p];
+});
+
+sass(input, options, function (err, result) {
+    if (err) {
+        throw err;
+    } else {
+        process.stdout.write(result.css);
+    }
+})
