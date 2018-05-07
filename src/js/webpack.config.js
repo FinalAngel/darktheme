@@ -58,7 +58,7 @@ if (argv.debug) {
 module.exports = {
     devtool: argv.debug ? 'cheap-module-eval-source-map' : false,
     entry: {
-        base: path.join(__dirname, 'themeScript.js'),
+        themeScript: path.join(__dirname, 'themeScript.js'),
     },
     output: {
         path: path.join(__dirname, '..', '..', 'theme'),
@@ -85,18 +85,6 @@ module.exports = {
                 }],
                 exclude: /(node_modules|vendor|libs|addons\/jquery.*)/,
                 include: __dirname,
-            },
-            {
-                test: /bootstrap/,
-                use: [{
-                    loader: 'imports-loader',
-                    options: {
-                        $: 'jquery',
-                        jQuery: 'jquery',
-                        PopperModule: 'popper.js',
-                        Popper: '>PopperModule.default',
-                    },
-                }],
             },
         ],
     },

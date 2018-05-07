@@ -17,9 +17,10 @@ const gulp = require('gulp');
 const PROJECT_ROOT = __dirname;
 const PROJECT_PATH = {
     css: PROJECT_ROOT + '/theme',
-    sass: PROJECT_ROOT + '/private/sass',
-    webpack: PROJECT_ROOT + '/private/js',
-    svg: PROJECT_ROOT + '/private/svg',
+    sass: PROJECT_ROOT + '/src/sass',
+    webpack: PROJECT_ROOT + '/src/js',
+    svg: PROJECT_ROOT + '/src/svg',
+    sprites: PROJECT_ROOT + '/theme/static',
 };
 const PROJECT_PATTERNS = {
     js: [
