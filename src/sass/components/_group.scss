@@ -1,0 +1,51 @@
+// used for the category page or page_category.html example
+#group {
+    clear:both;
+    overflow: hidden;
+    padding: 15px;
+
+    > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+
+        width: 130px;
+        height: 130px;
+        margin: 15px;
+        padding: 5px;
+
+        transition: all 200ms;
+
+        color: #000;
+        font-family: "Open Sans Semibold";
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.4;
+
+        box-shadow: 0 0 2px rgba(0,0,0,.35);
+        background-color: rgba(0,0,0,.45);
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 0 0 2px #cc7b19;
+            background-color: rgba(0,0,0,.8) !important;
+        }
+    }
+    // individual colors
+    #comics {
+        background-color: #cc7b19;
+    }
+    #books {
+        background-color: #00bfbf;
+    }
+    .rootlink {
+        color: #fff;
+        border-color: #fff;
+    }
+    br {
+        display: none;
+    }
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <link rel="stylesheet" type="text/css" href="/theme/comics.css"></link>
+    <title>Ubooquity</title>
+    <meta name="mobile-web-app-capable" content="yes"></meta>
+    <link rel="apple-touch-icon" sizes="120x120" href="/theme/apple-touch-icon-120x120.png"></link>
+    <link rel="apple-touch-icon" sizes="152x152" href="/theme/apple-touch-icon-152x152.png"></link>
+    <link rel="apple-touch-icon" sizes="180x180" href="/theme/apple-touch-icon-180x180.png"></link>
+    <link rel="icon" type="image/png" sizes="16x16" href="/theme/favicon-16x16.png"></link>
+    <link rel="icon" type="image/png" sizes="32x32" href="/theme/favicon-32x32.png"></link>
+    <link rel="icon" type="image/png" sizes="96x96" href="/theme/favicon-96x96.png"></link>
+    <link rel="icon" type="image/png" sizes="192x192" href="/theme/android-chrome-192x192.png"></link>
+    <meta name="msapplication-TileColor" content="#2b5797"></meta>
+    <meta name="msapplication-TileImage" content="/theme/mstile-144x144.png"></meta>
+    <script type="text/javascript" src="/scripts/tools.js"></script>
+    <script type="text/javascript" src="/theme/themeScript.js"></script>
+</head>
+
+<body>
+    <div id="toppagebar">
+        <div id="topbarleft">
+            <a href="/comics/1/?index=0" id="arrowleft10" class="hidden topbutton"></a>
+            <a href="/comics/1/?index=-5" id="arrowleft" class="hidden topbutton"></a>
+        </div>
+        <div id="topbarcenter">
+            <a href="#" id="settings" class="topbutton" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"></a>
+            <a href="/comics/" id="arrowup" class="topbutton"></a>
+            <div id="pagelabel"><a href="#" onclick="showHidePopupMenu('pageselector','searchbox','settingsbox','comicdetails');return false;">Page 1</a>
+                <br/><a href="#" id="pagelabeltotal" onclick="showHidePopupMenu('pageselector','searchbox','settingsbox','comicdetails');return false;"> of 2</a></div>
+            <a href="#" id="search" class="topbutton" onclick="showHidePopupMenu('searchbox','pageselector','settingsbox','comicdetails');document.forms.searchform.searchstring.focus();return false;"></a>
+            <a href="/comics/1/?random=true" id="random" class="topbutton"></a>
+        </div>
+        <div id="topbarright">
+            <a href="/comics/1/?index=5" id="arrowright" class="topbutton"></a>
+            <a href="/comics/1/?index=5" id="arrowright10" class="hidden topbutton"></a>
+        </div>
+    </div>
+    <div id="group">
+        <div class="cellcontainer">
+            <div class="cell">
+                <div class="thumb">
+                    <a href="/comics/245/folderCover">
+                        <img src="https://i.pinimg.com/originals/9a/da/bf/9adabfa202da4155f403ec90743edf7f.jpg"></img>
+                    </a>
+                </div>
+                <div class="label">Black Science (2013)</div>
+                <div class="numberblock">
+                    <div class="number"><span>35</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="cellcontainer">
+            <div class="cell">
+                <div class="thumb">
+                    <a href="/comics/238/folderCover"><img src="https://i.pinimg.com/originals/9a/da/bf/9adabfa202da4155f403ec90743edf7f.jpg"></img>
+                    </a>
+                </div>
+                <div class="label">Dark Reign Fantastic Four (2009)</div>
+                <div class="numberblock">
+                    <div class="number"><span>5</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="cellcontainer">
+            <div class="cell">
+                <div class="thumb">
+                    <a href="/comics/216/folderCover"><img src="https://i.pinimg.com/originals/9a/da/bf/9adabfa202da4155f403ec90743edf7f.jpg"></img>
+                    </a>
+                </div>
+                <div class="label">Fantastic Four By Jonathan Hickman (2010)</div>
+                <div class="numberblock">
+                    <div class="number"><span>6</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="cellcontainer">
+            <div class="cell">
+                <div class="thumb">
+                    <a href="/comics/224/folderCover"><img src="https://i.pinimg.com/originals/9a/da/bf/9adabfa202da4155f403ec90743edf7f.jpg"></img>
+                    </a>
+                </div>
+                <div class="label">Hellboy (2002)</div>
+                <div class="numberblock">
+                    <div class="number"><span>12</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="cellcontainer">
+            <div class="cell">
+                <div class="thumb">
+                    <a href="/comics/212/folderCover"><img src="https://i.pinimg.com/originals/9a/da/bf/9adabfa202da4155f403ec90743edf7f.jpg"></img>
+                    </a>
+                </div>
+                <div class="label">Maus A Survivors Tale (1986)</div>
+                <div class="numberblock">
+                    <div class="number"><span>2</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dimoverlay"></div>
+    <div class="popupmenu" id="pageselector">
+        <div class="popuptitle">Go to page</div>
+        <div class="pagenumber currentpagenumber">1</div><a href="/comics/1/?index=5" class="pagenumber">2</a></div>
+    <div class="popupmenu" id="searchbox">
+        <div class="popuptitle">Find comic book</div>
+        <form id="searchform" method="POST" action="/comics/?search=true">
+            <input class="textbox" type="text" name="searchstring"></input>
+            <input class="actionbutton" type="submit" value="Search"></input>
+        </form>
+        <br/>
+    </div>
+    <div class="popupmenu" id="comicdetails"></div>
+    <div class="popupmenu" id="settingsbox">
+        <div class="popuptitle">Display settings</div>
+        <form id="settingsform" method="POST" action="/comics/?settings=true">
+            <div class="sectiontitle">Grouping</div>
+            <label class="radiolabel">
+                <input type="radio" name="grouping" value="folder" checked="true"></input>Folder</label>
+            <label class="radiolabel">
+                <input type="radio" name="grouping" value="flat"></input>Flat</label>
+            <br/>
+            <br/>
+            <div class="sectiontitle">Sorting criterion</div>
+            <label class="radiolabel">
+                <input type="radio" name="sortingCriterion" value="path" checked="true"></input>Path</label>
+            <label class="radiolabel">
+                <input type="radio" name="sortingCriterion" value="date"></input>Date</label>
+            <br/>
+            <br/>
+            <div class="sectiontitle">Sorting order</div>
+            <label class="radiolabel">
+                <input type="radio" name="sortingOrder" value="asc" checked="true"></input>Ascending</label>
+            <label class="radiolabel">
+                <input type="radio" name="sortingOrder" value="desc"></input>Descending</label>
+            <br/>
+            <br/>
+            <input class="actionbutton" type="submit" value="Apply"></input>
+        </form>
+        <br/>
+    </div>
+</body>
+
+</html>

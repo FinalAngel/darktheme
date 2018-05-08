@@ -1,0 +1,78 @@
+.cellcontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+
+    width: 150px;
+    margin: 15px;
+
+    color: #000;
+    font-family: "Open Sans Regular";
+    font-size: 18px;
+    line-height: 1.4;
+
+    * {
+        transition: all 200ms;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        .thumb {
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 0 0 2px #cc7b19;
+            background-color: rgba(0,0,0,.8) !important;
+            img {
+                opacity: 0.8;
+            }
+        }
+        .numberblock {
+            opacity: 0;
+        }
+    }
+
+    .thumb {
+        overflow: hidden;
+        height: 230px;
+        box-shadow: 0 0 2px rgba(0,0,0,.35);
+        background-color: rgba(0,0,0,.45);
+        a {
+            display: block;
+            background: #000;
+        }
+    }
+
+    .label {
+        display: block;
+        overflow: hidden;
+        color: #fff;
+        line-height: 20px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 150px;
+        height: 30px;
+        padding-top: 10px;
+    }
+
+    .numberblock {
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 1;
+        font-size: 13px;
+        color: rgb(238, 238, 238);
+        line-height: 24px;
+
+        padding: 0 8px;
+        background-color: #cc7b19;
+        box-shadow: 0 0 4px rgba(0,0,0,.6);
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

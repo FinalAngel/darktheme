@@ -6,22 +6,22 @@ const gutil = require('gulp-util');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const styleLint = require('gulp-stylelint');
+// const styleLint = require('gulp-stylelint');
 const { importer } = require('npm-sass');
 
 
 module.exports = function (gulp, opts) {
     return function () {
         return gulp.src(opts.PROJECT_PATTERNS.sass)
-            .pipe(styleLint({
-                reporters: [{
-                    formatter: (opts.argv.debug) ? 'verbose' : 'string',
-                    console: true,
-                }],
-            }))
-            .on('error', function () {
-                this.emit('end');
-            })
+            // .pipe(styleLint({
+            //     reporters: [{
+            //         formatter: (opts.argv.debug) ? 'verbose' : 'string',
+            //         console: true,
+            //     }],
+            // }))
+            // .on('error', function () {
+            //     this.emit('end');
+            // })
             .pipe(gulpif(opts.argv.debug, sourcemaps.init()))
             .pipe(sass({
                 importer: importer,

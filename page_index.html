@@ -24,11 +24,17 @@
 <body>
     <div id="banner"></div>
 
-    <!-- <div id="userinfo">Connected as {{user}} - <a href="./?logout=true" id="logoutlink">Log out</a></div> -->
+    <!-- shows when you are logged in -->
+    <!-- <div id="userinfo">Connected as {user} - <a href="./?logout=true" id="logoutlink">Log out</a></div> -->
 
-    <div id="group"><a href="/comics/" id="comics">Comics</a><a href="/books/" id="books">Books</a>
+    <div id="group">
+        <a href="/comics/" id="comics" class="rootlink">Comics</a>
+        <a href="/books/" id="books" class="rootlink">Books</a>
         <br/>
-        <br/><a href="/comics/?latest=true" id="latest-comics">Latest comics</a><a href="/books/?latest=true" id="latest-books">Latest books</a></div>
+        <br/>
+        <a href="/comics/?latest=true" id="latest-comics" class="rootlink">Latest comics</a>
+        <a href="/books/?latest=true" id="latest-books" class="rootlink">Latest books</a>
+    </div>
     <br/>
     <br/><a href="http://vaemendis.net/ubooquity" id="poweredby">Powered by Ubooquity</a></body>
 

@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+/~
+/node_modules
+.sass-cache
+npm-debug.log
+package-lock.json
+*.css.map

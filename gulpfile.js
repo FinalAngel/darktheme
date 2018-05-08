@@ -1,26 +1,11 @@
-/*
- * Copyright (c) 2013, Divio AG
- * Licensed under BSD
- * http://github.com/divio/djangocms-boilerplate-webpack
- */
-
-// INFO:
-// - The minimatch/graceful-fs warnings are from gulp, needs upgrade to 4.0 once released.
-
-// #############################################################################
-// IMPORTS
 const argv = require('minimist')(process.argv.slice(2));
 const gulp = require('gulp');
 
-// #############################################################################
-// SETTINGS
 const PROJECT_ROOT = __dirname;
 const PROJECT_PATH = {
     css: PROJECT_ROOT + '/theme',
     sass: PROJECT_ROOT + '/src/sass',
     webpack: PROJECT_ROOT + '/src/js',
-    svg: PROJECT_ROOT + '/src/svg',
-    sprites: PROJECT_ROOT + '/theme/static',
 };
 const PROJECT_PATTERNS = {
     js: [
@@ -32,9 +17,6 @@ const PROJECT_PATTERNS = {
     sass: [
         PROJECT_PATH.sass + '/**/*.{scss,sass}',
     ],
-    svg: {
-        icons: [PROJECT_PATH.svg + '/**/*.svg'],
-    },
 };
 
 /**
@@ -59,15 +41,10 @@ function task(id, extra) {
     );
 }
 
-
-// #############################################################################
-// TASKS
 gulp.task('sass', task('sass'));
 gulp.task('webpack', task('webpack'));
 gulp.task('webpack:watch', task('webpack', { watch: true }));
-
 gulp.task('lint', task('lint'));
-gulp.task('icons', task('svg', { svg: 'icons' }));
 
 gulp.task('default', ['sass', 'webpack', 'watch']);
 

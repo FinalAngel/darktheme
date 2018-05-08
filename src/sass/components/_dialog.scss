@@ -1,0 +1,92 @@
+
+#comicdetails {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    z-index: 1080;
+
+    #details {
+        clear: both;
+        overflow: hidden;
+        max-width: 750px;
+        padding: 0;
+        margin: 70px auto;
+
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        background-color: #282828;
+        border-radius: 3px;
+        background-clip: padding-box;
+        outline: none;
+    }
+
+    #details_cover {
+        float: left;
+        padding-right: 25px;
+        img {
+            width: 300px;
+            @media only screen and (max-width:768px){
+                display: none;
+            }
+        }
+    }
+
+    #details_title {
+        color: eee;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        margin: 0 0 20px;
+        background: #323232;
+    }
+    #details_description,
+    #details_size,
+    #details_language_pubdate {
+        color: #999;
+        padding: 5px 20px;
+    }
+
+    #details_download {
+        &:before {
+            content: "Download";
+        }
+    }
+    #details_read {
+        &:before {
+            content: "Read Now";
+        }
+    }
+    #details_download,
+    #details_read {
+        display: inline-block;
+        font-family: Open Sans Bold;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.33;
+        text-transform: uppercase;
+        border-radius: 3px;
+        padding: 8px 14px;
+        margin: 10px 0;
+        border: 0;
+        background-color: #cc7b19;
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            background-color: darken(#cc7b19, 10%);
+        }
+    }
+    #details_download {
+        margin-right: 20px;
+        background: rgba(255, 255, 255, 0.25);
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+    }
+}
