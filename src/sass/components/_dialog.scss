@@ -90,3 +90,33 @@
         }
     }
 }
+
+#details_close {
+    float: right;
+    color: #eee;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    width: 64px;
+    height: 52px;
+    padding-top: 12px;
+    opacity: 0.2;
+    &:hover {
+        opacity: 0.8;
+    }
+    &:before {
+        content: "x";
+    }
+}
+
+#dimoverlay {
+    visibility: hidden;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1070;
+    background-color: #000;
+}

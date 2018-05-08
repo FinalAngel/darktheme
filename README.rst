@@ -1,5 +1,21 @@
+####################
+Ubooquity Plex Theme
+####################
 
-Run server ``node server.js``
-Open ``http://localhost:8001/page_home.html``
+Plex based theme for Ubooquity:
+https://vaemendis.github.io/ubooquity-doc/pages/themes.html
 
-* Set thumbnail size in settings to maximum
+
+Installation
+############
+
+For the best result set the thumbnail size to the maximum in the settings.
+
+
+Development
+###########
+
+* Install packages via ``npm install``
+* Run server ``node server.js``
+* Run gulp for development ``gulp watch``
+* Open ``http://localhost:8001/page_index.html``
