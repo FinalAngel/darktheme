@@ -1,24 +1,22 @@
 
 #comicdetails,
 #bookdetails {
-    pointer-events: none;
     display: none;
-    position: fixed;
-    overflow-y: auto;
-    position: fixed;
+    position: absolute;
+    left: 0;
     top: 0;
-    right: 20px;
-    bottom: 0;
-    left: 20px;
-    z-index: 1090;
 
     #details {
-        pointer-events: auto;
+        position: absolute;
         clear: both;
         overflow: hidden;
-        max-width: 750px;
+        width: 750px;
+        margin-left: -375px;
+        margin-top: 70px;
+        left: 50vw;
+        top: 0;
         padding: 0;
-        margin: 70px auto;
+        z-index: 1080;
 
         box-shadow: 0 5px 15px rgba(0,0,0,.5);
         background-color: #282828;
@@ -32,7 +30,6 @@
         padding-right: 25px;
         img {
             width: 300px;
-            padding-bottom: 10px;
             @media only screen and (max-width:768px){
                 display: none;
             }
@@ -40,7 +37,7 @@
     }
 
     #details_title {
-        color: eee;
+        color: #eee;
         font-size: 20px;
         line-height: 1.4;
         text-transform: uppercase;
