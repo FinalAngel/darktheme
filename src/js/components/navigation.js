@@ -75,7 +75,7 @@ export default class Navigation {
             if (!$('#topbarleft #arrowleft').hasClass('hidden')) {
                 prev = '';
                 page = true;
-                if (!$('#topbarleft #topbarleft10').hasClass('hidden')) {
+                if (!$('#topbarleft #arrowleft10').hasClass('hidden')) {
                     prev += '<a href="' + $('#arrowleft10').prop('href') + '" class="btn-link btn-dark">First</a>';
                 }
                 prev += '<a href="' + $('#arrowleft').prop('href') + '" class="btn-link">Previous</a>';
