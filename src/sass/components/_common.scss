@@ -3,7 +3,7 @@ body {
     height: 100%;
 }
 body {
-    background: #3f4245 url('/theme/static/preset-light.png');
+    background: #3f4245 url('../static/preset-light.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -47,7 +47,8 @@ body {
 }
 
 #poweredby,
-#searchbox {
+#searchbox,
+#userinfo {
     display: none;
 }
 
@@ -57,7 +58,7 @@ body {
     position: absolute;
     top: 64px;
     right: 5px;
-    z-index: 1030;
+    z-index: 1090;
 
     color: rgb(187, 187, 187);
 

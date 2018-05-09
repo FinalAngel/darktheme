@@ -27,7 +27,9 @@
         box-shadow: 0 0 2px rgba(0,0,0,.35);
         background-color: rgba(0,0,0,.45);
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             color: #fff;
             text-decoration: none;
             box-shadow: 0 0 0 2px #cc7b19;
@@ -41,6 +43,8 @@
     #books {
         background-color: #00bfbf;
     }
+    #latest-comics,
+    #latest-books,
     .rootlink {
         color: #fff;
         border-color: #fff;

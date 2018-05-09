@@ -11,8 +11,9 @@ export default class Navigation {
         var backBtn = '<li><a class="back-btn" href="../"><i class="glyphicon chevron-left"></i></a></li>'
         var randomBtn = '<li><a href="./?random=true" title="Random"><i class="glyphicon random"></i></a></li>';
         var logoutBtn = '<li><a href="./?logout=true" title="Logout"><i class="glyphicon log-out"></i></a></li>';
+        var settingsBtn = `<li><a href="#" title="Settings" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"><i class="glyphicon settings"></i></a></li>`;
 
-        this.template = (backBtn = '', randomBtn = '', logoutBtn = '') => `
+        this.template = (backBtn = '', randomBtn = '', settingsBtn = '', logoutBtn = '') => `
             <div class="navigation">
                 <ul class="nav nav-bar-nav">
                     ${backBtn}
@@ -30,7 +31,7 @@ export default class Navigation {
                 </form>
 
                 <ul class="nav nav-bar-nav nav-bar-right">
-                    <li><a href="#" title="Settings" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"><i class="glyphicon settings"></i></a></li>
+                    ${settingsBtn}
                     ${randomBtn}
                     ${logoutBtn}
                 </ul>
@@ -39,43 +40,41 @@ export default class Navigation {
 
         let container = '';
         if ($('#banner').length) {
-            console.log('isHomePage');
-
             container = $('#banner');
             backBtn = '';
             randomBtn = '';
+            settingsBtn = '';
             container.html(this.template());
         } else if($('.cellcontainer').length) {
-            console.log('isListPage');
-
             container = $('#toppagebar');
         } else if($('#toppagebar').length) {
-            console.log('isCategoryPage');
-
             container = $('#toppagebar');
         }
         if (!$('#userinfo').length) {
             logoutBtn = '';
         }
 
-        container.hide().after(this.template(backBtn, randomBtn, logoutBtn));
+        container.hide().after(this.template(backBtn, randomBtn, settingsBtn, logoutBtn));
     }
 
     pagination() {
         // handling of pagination
         if ($('#arrowright').length) {
-            var pagination = (text = '', prev = '', next = '') => `
-                <div class="pagination">
+            var pagination = (text = '', prev = '', next = '', hidden = '') => `
+                <div class="pagination" ${hidden}>
                     ${prev} ${text} ${next}
                 </div>
             `;
             var prev = '';
             var next = '';
+            var hidden = '';
             var pagetext = $('#pagelabel').text();
+            var page = false;
 
             // show left arrow
             if (!$('#topbarleft #arrowleft').hasClass('hidden')) {
                 prev = '';
+                page = true;
                 if (!$('#topbarleft #topbarleft10').hasClass('hidden')) {
                     prev += '<a href="' + $('#arrowleft10').prop('href') + '" class="btn-link btn-dark">First</a>';
                 }
@@ -83,12 +82,16 @@ export default class Navigation {
             }
             if (!$('#topbarright #arrowright').hasClass('hidden')) {
                 next = '<a href="' + $('#arrowright').prop('href') + '" class="btn-link">Next</a>';
+                page = true;
                 if (!$('#topbarright #arrowright10').hasClass('hidden')) {
                     next += '<a href="' + $('#arrowright10').prop('href') + '" class="btn-link btn-dark">Last</a>';
                 }
             }
+            if (!page) {
+                hidden = 'hidden'
+            }
 
-            $('#group').after(pagination(pagetext, prev, next));
+            $('#group').after(pagination(pagetext, prev, next, hidden));
         }
     }
 }
