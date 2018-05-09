@@ -5,10 +5,10 @@ Ubooquity Plex Theme
 Plex based theme for Ubooquity:
 https://vaemendis.github.io/ubooquity-doc/pages/themes.html
 
-.. image:: samples/landing.png
-.. image:: samples/overview.png
-.. image:: samples/listview.png
-.. image:: samples/detailview.png
+.. image:: samples/landing.png#1
+.. image:: samples/overview.png#1
+.. image:: samples/listview.png#1
+.. image:: samples/detailview.png#1
 
 
 Installation
