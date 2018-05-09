@@ -32,6 +32,7 @@
         padding-right: 25px;
         img {
             width: 300px;
+            padding-bottom: 10px;
             @media only screen and (max-width:768px){
                 display: none;
             }
@@ -52,6 +53,10 @@
     #details_language_pubdate {
         color: #999;
         padding: 5px 20px;
+    }
+    #details_description {
+        padding-bottom: 15px;
+        max-height: 280px;
     }
 
     #details_download {
