@@ -5,20 +5,20 @@ hr,img{border:0}body,figure{margin:0}article,aside,details,figcaption,figure,foo
     font-family:Open Sans Regular;
     font-weight:400;
     font-style:normal;
-    src:url("../static/open-sans.woff") format("woff")
+    src:url("./static/open-sans.woff") format("woff")
 }
 
 @font-face{
     font-family:Open Sans Bold;
     font-weight:400;
     font-style:normal;
-    src:url("..//static/open-sans-bold.woff") format("woff")
+    src:url("./static/open-sans-bold.woff") format("woff")
 }
 @font-face{
     font-family:Open Sans Semibold;
     font-style:normal;
     font-weight:400;
-    src:url("../static/open-sans-semibold.woff") format("woff")
+    src:url("./static/open-sans-semibold.woff") format("woff")
 }
 
 .nav {
@@ -133,7 +133,7 @@ hr,img{border:0}body,figure{margin:0}article,aside,details,figcaption,figure,foo
 // ICONS
 @font-face{
     font-family: "Glyphicons Regular";
-    src: url("../static/glyphicons.woff") format("woff");
+    src: url("./static/glyphicons.woff") format("woff");
     font-weight: 400;
     font-style: normal
 }
@@ -166,7 +166,7 @@ hr,img{border:0}body,figure{margin:0}article,aside,details,figcaption,figure,foo
 
 @font-face{
     font-family:plex-icons;
-    src:url("../static/plexicons.woff") format("woff")
+    src:url("./static/plexicons.woff") format("woff")
 }
 [class*=" plex-icon-"],[class^=plex-icon-]{
     position:relative;
