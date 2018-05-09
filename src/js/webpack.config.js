@@ -61,9 +61,9 @@ module.exports = {
         themeScript: path.join(__dirname, 'themeScript.js'),
     },
     output: {
-        path: path.join(__dirname, '..', '..', 'theme'),
+        path: path.join(__dirname, '..', '..'),
         filename: '[name].js',
-        publicPath: '/theme/',
+        publicPath: '',
     },
     plugins: plugins,
     resolve: {

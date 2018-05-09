@@ -3,7 +3,7 @@ const gulp = require('gulp');
 
 const PROJECT_ROOT = __dirname;
 const PROJECT_PATH = {
-    css: PROJECT_ROOT + '/theme',
+    css: PROJECT_ROOT + '',
     sass: PROJECT_ROOT + '/src/sass',
     webpack: PROJECT_ROOT + '/src/js',
 };
