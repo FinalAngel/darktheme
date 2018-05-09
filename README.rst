@@ -1,6 +1,6 @@
-####################
-Ubooquity Plex Theme
-####################
+##########################
+Ubooquity Plex Based Theme
+##########################
 
 Plex based theme for Ubooquity:
 https://vaemendis.github.io/ubooquity-doc/pages/themes.html
