@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <link rel="stylesheet" type="text/css" href="./homepage.css"></link>
+    <title>Ubooquity</title>
+    <meta name="mobile-web-app-capable" content="yes"></meta>
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon-120x120.png"></link>
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon-152x152.png"></link>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png"></link>
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"></link>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"></link>
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png"></link>
+    <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png"></link>
+    <meta name="msapplication-TileColor" content="#2b5797"></meta>
+    <meta name="msapplication-TileImage" content="./mstile-144x144.png"></meta>
+    <script type="text/javascript" src="/scripts/tools.js"></script>
+    <script type="text/javascript" src="./themeScript.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="/scripts/sha256-min.js"></script>
+    <script type="text/javascript">
+        function submitform() {
+            document.getElementById('hash').value = hex_hmac_sha256(hex_hmac_sha256(document.getElementById('passwordfield').value, document.getElementById('serversalt').value), document.getElementById('servertime').value);
+            document.getElementById('passwordfield').value = '';
+            document.forms['loginform'].submit();
+        }
+    </script>
+    <div id="banner"></div>
+    <form id="loginform" method="POST" action="/">Please identify yourself
+        <br></br>
+        <br></br>
+        <input type="hidden" id="serversalt" value="d0809793df2c3be1a77a229781cfe1cdb1a2a"></input>
+        <input type="hidden" id="servertime" name="servertime" value="1525851364402"></input>Username
+        <input type="text" id="loginfield" name="login" onfocus="if(this.value == 'username') { this.value = ''; }" value=""></input>
+        <br></br>Password
+        <input type="password" id="passwordfield" onfocus="if(this.value == 'password') { this.value = ''; }" value=""></input>
+        <input type="hidden" id="hash" name="hash"></input>
+        <br></br>
+        <br></br>
+        <input type="submit" id="loginbutton" onclick="submitform();" value="log in"></input>
+    </form>
+</body>
+
+</html>
