@@ -35,13 +35,22 @@
     }
 
     .thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
+        width: 150px;
         height: 230px;
+        text-align: center;
         box-shadow: 0 0 2px rgba(0,0,0,.35);
         background-color: rgba(0,0,0,.45);
         a {
+            height: 230px;
             display: block;
             background: #000;
+        }
+        img {
+            max-height: 100%;
         }
     }
 
@@ -70,9 +79,5 @@
         padding: 0 8px;
         background-color: #cc7b19;
         box-shadow: 0 0 4px rgba(0,0,0,.6);
-    }
-
-    img {
-        max-width: 100%;
     }
 }
