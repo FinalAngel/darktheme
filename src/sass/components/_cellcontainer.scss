@@ -50,7 +50,10 @@
             background: #000;
         }
         img {
-            height: 101%;
+            // avoid 1px white strip
+            top: -1px;
+            position: relative;
+            height: calc(100% + 2px);
         }
     }
 
