@@ -9,6 +9,7 @@ CHANGELOG
 0.1.0
 #####
 
+* Added nice favicon
 * Fixed background not covering full height on long list
 * Fixed modal displaying on top on long lists
 * Fixed covers displaying 1px shite stripes
