@@ -1,0 +1,20 @@
+#########
+CHANGELOG
+#########
+
+
+CHANGELOG
+#########
+
+0.1.0
+#####
+
+* Fixed background not covering full height on long list
+* Fixed modal displaying on top on long lists
+* Fixed covers displaying 1px shite stripes
+* Fixed back button by using history.back()
+
+0.0.1
+#####
+
+* Initial announcement on https://ubooquity.userecho.com/communities/1/topics/666-plex-based-theme
