@@ -5,10 +5,11 @@ export default class Navigation {
     constructor(options) {
         this.header();
         this.pagination();
+        this.backBtn();
     }
 
     header() {
-        var backBtn = '<li><a class="back-btn" href="../"><i class="glyphicon chevron-left"></i></a></li>'
+        var backBtn = '<li><a class="back-btn js-back" href="../"><i class="glyphicon chevron-left"></i></a></li>'
         var randomBtn = '<li><a href="./?random=true" title="Random"><i class="glyphicon random"></i></a></li>';
         var logoutBtn = '<li><a href="./?logout=true" title="Logout"><i class="glyphicon log-out"></i></a></li>';
         var settingsBtn = `<li><a href="#" title="Settings" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"><i class="glyphicon settings"></i></a></li>`;
@@ -93,5 +94,12 @@ export default class Navigation {
 
             $('#group').after(pagination(pagetext, prev, next, hidden));
         }
+    }
+
+    backBtn() {
+        $('.navigation').on('click', '.js-back', function (e) {
+            e.preventDefault();
+            window.history.back();
+        });
     }
 }
