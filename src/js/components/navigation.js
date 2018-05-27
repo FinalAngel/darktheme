@@ -13,7 +13,7 @@ export default class Navigation {
         var randomBtn = '<li><a href="./?random=true" title="Random"><i class="glyphicon random"></i></a></li>';
         var logoutBtn = '<li><a href="./?logout=true" title="Logout"><i class="glyphicon log-out"></i></a></li>';
         var settingsBtn = `<li><a href="#" title="Settings" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"><i class="glyphicon settings"></i></a></li>`;
-        var homeBtn = '<li><a class="home-btn" href="./"><i class="glyphicon home"></i></a></li>';
+        var homeBtn = '<li><a class="home-btn" href="#"><i class="glyphicon home"></i></a></li>';
 
         this.template = (backBtn = '', randomBtn = '', settingsBtn = '', logoutBtn = '', homeBtn = '') => `
             <div class="navigation">
@@ -58,7 +58,8 @@ export default class Navigation {
 
         // set correct home btn
         if ($('#arrowup').length) {
-            homeBtn = '<li><a class="home-btn" href="' + $('#arrowup').attr('href') + '"><i class="glyphicon home"></i></a></li>';
+            var home = $('#arrowup').attr('href');
+            homeBtn = '<li><a class="home-btn" href="/' + home.split('/')[1] + '/"><i class="glyphicon home"></i></a></li>';
         }
 
         container.hide().after(this.template(backBtn, randomBtn, settingsBtn, logoutBtn, homeBtn));
