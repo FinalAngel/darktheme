@@ -58,8 +58,9 @@ export default class Navigation {
 
         // set correct home btn
         if ($('#arrowup').length) {
-            var home = $('#arrowup').attr('href');
-            homeBtn = '<li><a class="home-btn" href="/' + home.split('/')[1] + '/"><i class="glyphicon home"></i></a></li>';
+            var prefix = $('#arrowup').attr('href');
+            prefix = prefix.split('/')[1] || '';
+            homeBtn = '<li><a class="home-btn" href="/' + prefix + '"><i class="glyphicon home"></i></a></li>';
         }
 
         container.hide().after(this.template(backBtn, randomBtn, settingsBtn, logoutBtn, homeBtn));
