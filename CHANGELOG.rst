@@ -6,6 +6,11 @@ CHANGELOG
 CHANGELOG
 #########
 
+0.1.1
+#####
+
+* Fixed an issue where reverse proxy prefix was not honoured
+
 0.1.0
 #####
 
