@@ -13,7 +13,7 @@ export default class Navigation {
         var randomBtn = '<li><a href="./?random=true" title="Random"><i class="glyphicon random"></i></a></li>';
         var logoutBtn = '<li><a href="./?logout=true" title="Logout"><i class="glyphicon log-out"></i></a></li>';
         var settingsBtn = `<li><a href="#" title="Settings" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"><i class="glyphicon settings"></i></a></li>`;
-        var homeBtn = '<li><a class="home-btn"><i class="glyphicon home"></i></a></li>';
+        var homeBtn = '<li><a class="home-btn" href="' + window.location.href + '"><i class="glyphicon home"></i></a></li>';
 
         this.template = (backBtn = '', randomBtn = '', settingsBtn = '', logoutBtn = '', homeBtn = '') => `
             <div class="navigation">
