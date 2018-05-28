@@ -10,6 +10,7 @@ CHANGELOG
 #####
 
 * Fixed an issue where reverse proxy prefix was not honoured
+* Added default colour for raw files
 
 0.1.0
 #####
