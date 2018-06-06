@@ -11,6 +11,7 @@ CHANGELOG
 
 * Fixed an issue where reverse proxy prefix was not honoured
 * Added default colour for raw files
+* Fixed an issue with search not displaying the correct results
 
 0.1.0
 #####

@@ -14,17 +14,18 @@ export default class Navigation {
         var logoutBtn = '<li><a href="./?logout=true" title="Logout"><i class="glyphicon log-out"></i></a></li>';
         var settingsBtn = `<li><a href="#" title="Settings" onclick="showHidePopupMenu('settingsbox','pageselector','searchbox','comicdetails');return false;"><i class="glyphicon settings"></i></a></li>`;
         var homeBtn = '<li><a class="home-btn" href="' + window.location.href + '"><i class="glyphicon home"></i></a></li>';
+        var search = '';
 
-        this.template = (backBtn = '', randomBtn = '', settingsBtn = '', logoutBtn = '', homeBtn = '') => `
+        this.template = (backBtn = '', randomBtn = '', settingsBtn = '', logoutBtn = '', homeBtn = '', search='') => `
             <div class="navigation">
                 <ul class="nav nav-bar-nav">
                     ${backBtn}
                     ${homeBtn}
                 </ul>
 
-                <form action="/comics/?search=true" method="post" class="nav-bar-search-container">
+                <form action="${search}" method="post" class="nav-bar-search-container">
                     <div class="QuickSearch-container-2PWkB">
-                        <div class="QuickSearchInput-container-R2-wn"> <!-- QuickSearchInput-focused-2kpW8 -->
+                        <div class="QuickSearchInput-container-R2-wn">
                             <i class="plex-icon-search-560 QuickSearchInput-searchIcon-1f6m9" aria-hidden="true"></i>
                             <input type="text" class="QuickSearchInput-searchInput-2HU6-" value="" autocomplete="off" spellcheck="false" name="searchstring">
                             <input class="actionbutton" hidden type="submit" value="Search">
@@ -56,6 +57,14 @@ export default class Navigation {
             logoutBtn = '';
         }
 
+        // set search value
+        if ($('#searchform').length) {
+            search = $('#searchform').attr('action');
+        } else {
+            search = '/?search=true';
+        }
+        console.log(search);
+
         // set correct home btn
         if ($('#arrowup').length) {
             var prefix = $('#arrowup').attr('href');
@@ -63,7 +72,7 @@ export default class Navigation {
             homeBtn = '<li><a class="home-btn" href="/' + prefix + '"><i class="glyphicon home"></i></a></li>';
         }
 
-        container.hide().after(this.template(backBtn, randomBtn, settingsBtn, logoutBtn, homeBtn));
+        container.hide().after(this.template(backBtn, randomBtn, settingsBtn, logoutBtn, homeBtn, search));
     }
 
     pagination() {
